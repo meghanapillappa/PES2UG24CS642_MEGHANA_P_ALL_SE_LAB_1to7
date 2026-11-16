@@ -1,0 +1,22 @@
+
+from hypothesis import given, strategies as st
+
+from atm_withdrawal import notes_needed, mask_card, average_withdrawal
+
+
+# Test 1: notes_needed()
+@given(st.text() | st.none())
+def test_notes_needed_no_crash(s):
+    notes_needed(s)
+
+
+# Test 2: mask_card()
+@given(st.text() | st.none())
+def test_mask_card_no_crash(s):
+    mask_card(s)
+
+
+# Test 3: average_withdrawal()
+@given(st.text() | st.none())
+def test_average_withdrawal_no_crash(s):
+    average_withdrawal(s)
